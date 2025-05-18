@@ -55,9 +55,12 @@ export default function FeaturesSection() {
       cardsObserver.observe(cardsRef.current)
     }
 
+    const currentSectionRef = sectionRef.current;
+    const currentCardsRef = cardsRef.current;
+
     return () => {
-      if (sectionRef.current) sectionObserver.unobserve(sectionRef.current)
-      if (cardsRef.current) cardsObserver.unobserve(cardsRef.current)
+      if (currentSectionRef) sectionObserver.unobserve(currentSectionRef)
+      if (currentCardsRef) cardsObserver.unobserve(currentCardsRef)
     }
   }, [])
 

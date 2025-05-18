@@ -113,8 +113,8 @@ export default function Header() {
           <div className="py-2">
             <button 
               className="flex items-center justify-between w-full text-base font-medium text-gray-900 hover:text-orange-500"
-              onClick={(e) => {
-                e.currentTarget.nextElementSibling.classList.toggle('hidden');
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                (e.currentTarget.nextElementSibling as HTMLElement)?.classList.toggle('hidden');
               }}
             >
               Resources

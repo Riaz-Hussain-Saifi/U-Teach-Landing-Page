@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-white p-6 rounded-xl shadow-sm border">
-            <p className="text-gray-700 mb-6">"{testimonial.content}"</p>
+            <p className="text-gray-700 mb-6"> {testimonial.content}</p>
             <div className="flex items-center gap-4">
               <Image
                 src={testimonial.avatar || "/User-Thumb3.png"}

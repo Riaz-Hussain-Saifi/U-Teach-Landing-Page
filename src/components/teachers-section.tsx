@@ -98,12 +98,17 @@ export default function TeachersSection() {
       contentObserver.observe(contentRef.current)
     }
 
+    const currentSectionRef = sectionRef.current;
+    const currentImagesGridRef = imagesGridRef.current;
+    const currentContentRef = contentRef.current;
+
     return () => {
-      if (sectionRef.current) sectionObserver.unobserve(sectionRef.current)
-      if (imagesGridRef.current) imagesObserver.unobserve(imagesGridRef.current)
-      if (contentRef.current) contentObserver.unobserve(contentRef.current)
+      if (currentSectionRef) sectionObserver.unobserve(currentSectionRef)
+      if (currentImagesGridRef) imagesObserver.unobserve(currentImagesGridRef)
+      if (currentContentRef) contentObserver.unobserve(currentContentRef)
     }
   }, [])
+
 
   return (
     <section ref={sectionRef} className="container mx-auto px-4 py-16 md:py-24 overflow-hidden">
